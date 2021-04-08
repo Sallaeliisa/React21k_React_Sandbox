@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import BoxCards from "./BoxCards";
 
-class Main extends Component {
+class BoxesList extends Component {
   state = {
     persons: [
       {
@@ -41,17 +42,17 @@ class Main extends Component {
       <main>
         <button onClick={this.handleClick}>Click me</button>
         <div>
-          <Box
+          <BoxCards
             name={this.state.persons[0].name}
             age={this.state.persons[0].age}
             title={this.state.persons[0].title}
           />
-          <Box
+          <BoxCards
             name={this.state.persons[1].name}
             age={this.state.persons[1].age}
             title={this.state.persons[1].title}
           />
-          <Box
+          <BoxCards
             name={this.state.persons[2].name}
             age={this.state.persons[2].age}
             title={this.state.persons[2].title}
@@ -62,19 +63,4 @@ class Main extends Component {
   }
 }
 
-const Box = (props) => {
-  const handleClick = () => {
-    console.log("Wow");
-  };
-
-  return (
-    <div className="box">
-      <h2>Name: {props.name}</h2>
-      <p>Age: {props.age}</p>
-      <p>Title: {props.title}</p>
-      <button onClick={handleClick}>Like</button>
-    </div>
-  );
-};
-
-export default Main;
+export default BoxesList;

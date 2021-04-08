@@ -12,3 +12,11 @@ body {
   margin: 1rem 1rem 1rem 0rem;
   padding: 1rem;
 }
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
