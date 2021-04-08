@@ -36,7 +36,7 @@ class App extends Component {
     } circle`;
 
     return (
-      <div>
+      <div className='container'>
         <Header />
         <h1 className={circleClass}>{this.state.counter}</h1>
         <button onClick={this.addHandler}>Add one</button>
