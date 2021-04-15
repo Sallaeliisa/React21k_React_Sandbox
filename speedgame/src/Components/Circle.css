@@ -1,3 +1,4 @@
+
 .circle {
     display: inline-block;
     border-style: none;
@@ -6,6 +7,11 @@
     border-radius: 50%;
     margin: 0 0.9rem 0 0.9rem;
   }
+
+.circles {
+    display: flex;
+    justify-content: center;
+}
 
 .green {
     background-color: green;
@@ -16,7 +22,10 @@
 .red {
     background-color: red;
 }
-.orange {
-    background-color: orange;
+.blue {
+    background-color: blue;
 }
 
+.active {
+    background-image: url("../assets/active.png");
+}

@@ -2,7 +2,7 @@
 
 body {
 font-family: 'New Tegomin', serif;
-background-color: cadetblue;
+background-color: rgb(216, 125, 155);
 text-align: center;
 }
 
@@ -10,4 +10,40 @@ button {
   height: 30px;
   width: 90px;
   font-size: 16px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameoverbox {
+  background-color: white;
+  padding: 45px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.gameoverbox button {
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  outline: none;
+}
+
+#gameover {
+  font-size: 24px;
+  color: #333;
+  padding: 30px;
 }
