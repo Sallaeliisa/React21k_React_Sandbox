@@ -7,6 +7,7 @@ import gameover from "./assets/gameover.wav";
 
 let gameStartSound = new Audio(music);
 let gameOverSound = new Audio(gameover);
+let limiter = 0;
 
 const getRndInteger = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -17,10 +18,10 @@ class App extends Component {
     score: 0,
     current: 0,
     circles: [
-      { id: 1, color: "green" },
-      { id: 2, color: "yellow" },
-      { id: 3, color: "red" },
-      { id: 4, color: "blue" },
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
     ],
     showGameOver: false,
     rounds: 0,
@@ -31,16 +32,21 @@ class App extends Component {
   pace = 1500;
 
   clickHandler = (id) => {
-    console.log("clicked");
 
     if (this.state.current !== id) {
       this.endHandler();
       return;
     }
 
+    if (limiter < 1) {
     this.setState({
-      score: this.state.score + 1,
-      rounds: 0,
+      score: this.state.score + 1
+    });
+  limiter ++;
+}
+
+    this.setState({
+      rounds: 0
     });
   };
 
@@ -61,10 +67,9 @@ if(this.state.rounds >= 5) {
       current: nextActive,
       rounds: this.state.rounds + 1,
     });
-    console.log(this.state.rounds);
     this.pace *= 0.95;
     this.timer = setTimeout(this.nextCircle, this.pace);
-    // console.log(this.state.current);
+    limiter = 0;
   };
 
   startHandler = () => {
@@ -86,7 +91,6 @@ if(this.state.rounds >= 5) {
     const circlesList = this.state.circles.map((c) => {
       return (
         <Circle
-          // id={c.id}
           key={c.id}
           color={c.color}
           click={() => this.clickHandler(c.id)}
@@ -98,12 +102,14 @@ if(this.state.rounds >= 5) {
 
     return (
       <main>
-        <h1>SPEED GAME</h1>
+        <div className='game'>
+        <h1>Catch the chipmunk!</h1>
         <p>Your score is: {this.state.score}</p>
         <div className="circles">{circlesList}</div>
         <button onClick={this.startHandler}>Start</button>
         <button onClick={this.endHandler}>Stop</button>
         {this.state.showGameOver && <GameOver score={this.state.score} />}
+        </div>
       </main>
     );
   }
