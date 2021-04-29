@@ -1,26 +1,26 @@
 import React from 'react';
 
-const View = (props) => {
+const View = ({ firstname, lastname, phonenumber, message, role }) => {
     return (
         <div className="container">
         <div className="page">
-            <span class="underline">
+            <span className="underline">
             <h1>Input</h1>
             </span>
-            <span class="underline">
-            <p>First name: {props.firstname}</p>
+            <span className="underline">
+            <p>First name: {firstname}</p>
             </span>
-            <span class="underline">
-            <p>Last Name: {props.lastname}</p>
+            <span className="underline">
+            <p>Last Name: {lastname}</p>
             </span>
-            <span class="underline">
-            <p>Phone Number: {props.phonenumber}</p>
+            <span className="underline">
+            <p>Phone Number: {phonenumber}</p>
             </span>
-            <span class="underline">
-            <p>Role: {props.role}</p>
+            <span className="underline">
+            <p>Role: {role}</p>
             </span>
-            <span class="underline">
-            <p>Message: {props.message}</p>
+            <span className="underline">
+            <p>Message: {message}</p>
             </span>
         </div>
         </div>

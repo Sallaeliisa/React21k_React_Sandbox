@@ -25,52 +25,12 @@
       "role": "psychologist"
     },
     {
-      "firstname": "Salla",
-      "lastname": "Vuorikko",
-      "phonenumber": "12345",
-      "role": "Student",
-      "message": "jee",
-      "id": 4
-    },
-    {
-      "firstname": "Salla",
-      "lastname": "Vuorikko",
-      "phonenumber": "12345",
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "phonenumber": "9878493377",
       "role": "Visitor",
-      "message": "My new post is here",
-      "id": 5
-    },
-    {
-      "firstname": "Salla",
-      "lastname": "Vuorikko",
-      "phonenumber": "12345",
-      "role": "",
-      "message": "",
-      "id": 6
-    },
-    {
-      "firstname": "Salla",
-      "lastname": "Vuorikko",
-      "phonenumber": "12345",
-      "role": "Student",
-      "message": "New note",
-      "id": 7
-    },
-    {
-      "firstname": "Salla",
-      "lastname": "Vuorikko",
-      "phonenumber": "12345",
-      "role": "Teacher",
-      "message": "note",
-      "id": 8
-    },
-    {
-      "firstname": "Salla",
-      "lastname": "Vuorikko",
-      "phonenumber": "1234567",
-      "role": "Student",
-      "message": "Hello World!",
-      "id": 9
+      "message": "Spring is here!",
+      "id": 4
     }
   ]
 }
